@@ -312,8 +312,12 @@
   }
 
   .hero-avatar {
-    font-size: 120px;
-    filter: drop-shadow(0 4px 20px rgba(0, 0, 0, 0.2));
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 24px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+    background: var(--card-bg);
   }
 
   .hero-card::before {
@@ -599,7 +603,8 @@
     }
 
     .hero-avatar {
-      font-size: 80px;
+      width: 120px;
+      height: 120px;
     }
 
     .hero-title {
@@ -656,7 +661,8 @@
     }
 
     .hero-avatar {
-      font-size: 64px;
+      width: 100px;
+      height: 100px;
     }
   }
 </style>
@@ -718,7 +724,7 @@
       </div>
 
       <div class="hero-card">
-        <div class="hero-avatar">✈️</div>
+        <img class="hero-avatar" src="avatar.jpg" alt="Avatar">
       </div>
     </section>
 
