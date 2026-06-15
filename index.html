@@ -297,7 +297,6 @@
     width: 280px;
     height: 280px;
     border-radius: 24px;
-    background: linear-gradient(135deg, var(--fluent-blue) 0%, #50a0f0 100%);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -312,28 +311,11 @@
   }
 
   .hero-avatar {
-    width: 180px;
-    height: 180px;
+    width: 280px;
+    height: 280px;
     object-fit: cover;
     border-radius: 24px;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
-    background: var(--card-bg);
-  }
-
-  .hero-card::before {
-    content: '';
-    position: absolute;
-    top: -50%;
-    left: -50%;
-    width: 200%;
-    height: 200%;
-    background: radial-gradient(circle, rgba(255,255,255,0.15) 0%, transparent 60%);
-    animation: rotate 20s linear infinite;
-  }
-
-  @keyframes rotate {
-    from { transform: rotate(0deg); }
-    to { transform: rotate(360deg); }
   }
 
   /* ==================== Section 通用 ==================== */
@@ -603,8 +585,8 @@
     }
 
     .hero-avatar {
-      width: 120px;
-      height: 120px;
+      width: 200px;
+      height: 200px;
     }
 
     .hero-title {
@@ -661,8 +643,8 @@
     }
 
     .hero-avatar {
-      width: 100px;
-      height: 100px;
+      width: 160px;
+      height: 160px;
     }
   }
 </style>
