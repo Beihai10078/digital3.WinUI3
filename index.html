@@ -58,19 +58,29 @@
     --shadow-8: 0 8px 16px rgba(0, 0, 0, 0.50), 0 8px 32px rgba(0, 0, 0, 0.30);
   }
 
+  [data-theme="dark"] body {
+    background:
+      linear-gradient(rgba(32, 32, 32, 0.85), rgba(32, 32, 32, 0.85)),
+      url('background.png') center/cover fixed no-repeat;
+    background-color: var(--mica-base);
+  }
+
   * { margin: 0; padding: 0; box-sizing: border-box; }
   html, body { height: 100%; }
 
   body {
     font-family: 'Segoe UI Variable', 'Segoe UI', 'Microsoft YaHei', 'PingFang SC', sans-serif;
-    background: var(--mica-base);
+    background:
+      linear-gradient(rgba(243, 243, 243, 0.82), rgba(243, 243, 243, 0.82)),
+      url('background.png') center/cover fixed no-repeat;
+    background-color: var(--mica-base);
     color: var(--text-primary);
     font-size: 15px;
     font-weight: 400;
     -webkit-font-smoothing: antialiased;
     line-height: 1.6;
     overflow-x: hidden;
-    transition: background 0.3s ease;
+    transition: background 0.3s ease, background-color 0.3s ease;
   }
 
   /* ==================== 顶部导航栏 ==================== */
