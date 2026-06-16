@@ -892,9 +892,12 @@
 
     <!-- Footer -->
   <footer class="footer">
-    <div style="font-size: 28px; font-weight: 700; color: #0078D4; letter-spacing: 4px; margin-bottom: 20px;" id="footerSlogan" data-i18n="footer.slogan">
+    <div style="font-size: 28px; font-weight: 700; color: #0078D4; letter-spacing: 4px; margin-bottom: 8px;" id="footerSlogan" data-i18n="footer.slogan">
       數字三民主義，天下為公
     </div>
+    <p style="font-size: 13px; color: var(--text-secondary); margin-bottom: 20px; font-weight: 500;" id="footerMemorial">
+      纪念先总理逝世 101 年
+    </p>
     <p>
       <span id="footerMade">© Made with</span> 
       <span class="footer-heart">❤</span> 
@@ -1010,6 +1013,24 @@
       // 更新页脚
       document.getElementById('footerMade').textContent = dict['footer.made'];
       document.getElementById('footerDesign').textContent = dict['footer.design'];
+
+      // 更新纪念文字（实时年份）
+      updateMemorial();
+    }
+
+    // 实时更新纪念年份
+    function updateMemorial() {
+      const years = new Date().getFullYear() - 1925;
+      const memorialEl = document.getElementById('footerMemorial');
+      if (memorialEl) {
+        memorialEl.textContent = currentLang === 'zh'
+          ? '纪念先总理逝世 ' + years + ' 年'
+          : 'In memory of the founding pioneer: ' + years + ' years since passing';
+      }
+      const yearEl = document.getElementById('footerYear');
+      if (yearEl) {
+        yearEl.textContent = new Date().getFullYear() + ' · All rights reserved.';
+      }
     }
 
     // ============================================
@@ -1083,8 +1104,8 @@
       document.getElementById('themeBtn').addEventListener('click', toggleTheme);
       document.getElementById('langBtn').addEventListener('click', toggleLanguage);
 
-      // 显示年份
-      document.getElementById('footerYear').textContent = new Date().getFullYear() + ' · All rights reserved.';
+      // 实时更新纪念年份
+      updateMemorial();
     });
 
     // 键盘快捷键
