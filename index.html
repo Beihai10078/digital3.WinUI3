@@ -65,6 +65,22 @@
     background-color: var(--mica-base);
   }
 
+  /* 移动端竖版背景 */
+  @media (max-width: 768px) {
+    body {
+      background:
+        linear-gradient(rgba(243, 243, 243, 0.85), rgba(243, 243, 243, 0.85)),
+        url('mobile-bg.jpg') center/cover fixed no-repeat;
+      background-color: var(--mica-base);
+    }
+    [data-theme="dark"] body {
+      background:
+        linear-gradient(rgba(32, 32, 32, 0.88), rgba(32, 32, 32, 0.88)),
+        url('mobile-bg.jpg') center/cover fixed no-repeat;
+      background-color: var(--mica-base);
+    }
+  }
+
   * { margin: 0; padding: 0; box-sizing: border-box; }
   html, body { height: 100%; }
 
